@@ -80,3 +80,34 @@ exercises.c:72:10: error: returning ‘List *’ from a function with return typ
 cc1: all warnings being treated as errors
 Compilation failed
 47a6c83
+Wed 20 Mar 2024 08:39:32 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:66:8: error: ‘L’ redeclared as different kind of symbol
+   66 |   int* L = create_list();
+      |        ^
+exercises.c:64:21: note: previous definition of ‘L’ with type ‘List *’
+   64 | int sumaLista(List *L)
+      |               ~~~~~~^
+exercises.c:66:12: error: initialization of ‘int *’ from incompatible pointer type ‘List *’ [-Werror=incompatible-pointer-types]
+   66 |   int* L = create_list();
+      |            ^~~~~~~~~~~
+exercises.c:70:14: error: passing argument 1 of ‘pushBack’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+   70 |     pushBack(L, d++);
+      |              ^
+      |              |
+      |              int *
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:20:21: note: expected ‘List *’ but argument is of type ‘int *’
+   20 | void pushBack(List *L, void *dato);
+      |               ~~~~~~^
+In file included from test.c:5:
+exercises.c:72:10: error: returning ‘int *’ from a function with return type ‘int’ makes integer from pointer without a cast [-Werror=int-conversion]
+   72 |   return L;
+      |          ^
+cc1: all warnings being treated as errors
+Compilation failed
+5efc8f7
