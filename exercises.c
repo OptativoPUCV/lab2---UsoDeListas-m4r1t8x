@@ -68,8 +68,8 @@ int sumaLista(List *L)
   {
     pushBack(L, d++);
   }
-  return L;
-}*/
+  return L;*/
+}
 
 /*
 Ejercicio 3.
