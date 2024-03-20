@@ -63,3 +63,20 @@ Wed 20 Mar 2024 08:29:53 PM UTC:
  tests:  0|5
 total_score: 0/70
 daf20fa
+Wed 20 Mar 2024 08:39:02 PM UTC: 
+ exercises.c | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:66:9: error: ‘L’ redeclared as different kind of symbol
+   66 |   List* L = create_list();
+      |         ^
+exercises.c:64:21: note: previous definition of ‘L’ with type ‘List *’
+   64 | int sumaLista(List *L)
+      |               ~~~~~~^
+exercises.c:72:10: error: returning ‘List *’ from a function with return type ‘int’ makes integer from pointer without a cast [-Werror=int-conversion]
+   72 |   return L;
+      |          ^
+cc1: all warnings being treated as errors
+Compilation failed
+47a6c83
