@@ -432,3 +432,14 @@ exercises.c:89:8: error: unused variable ‘d’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 e1ea2e6
+Wed 20 Mar 2024 08:54:21 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:89:8: error: unused variable ‘d’ [-Werror=unused-variable]
+   89 |   int *d = (int*) first(lista);
+      |        ^
+cc1: all warnings being treated as errors
+Compilation failed
+71d4f83
