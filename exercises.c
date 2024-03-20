@@ -62,13 +62,13 @@ retorne la suma de sus elementos.
 */
 int sumaLista(List *L) 
 {
-  List* L = create_list();
-  int *d = (int*) first(L);
+  List* lista = create_list();
+  int *d = (int*) first(lista);
   int suma = 0;
-  while(L != NULL)
+  while(lista != NULL)
   {
     suma += *d;
-    *d = (int*) next(L);
+    *d = (int*) next(lista);
   }
   
   return suma;
