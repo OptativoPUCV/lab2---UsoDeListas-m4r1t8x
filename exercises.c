@@ -10,7 +10,8 @@
 
 //Funciones auxiliares que puedes utilizar para debuggear tus ejercicios
 //NO MODIFICAR
-void imprime_lista(List *L) {
+void imprime_lista(List *L) 
+{
    int *dato;
    dato = (int*)first(L);
    printf("[");
@@ -41,9 +42,18 @@ debes reservar memoria para cada elemento que agregues.
 Al finalizar retorna la lista creada.
 */
 
-List* crea_lista() {
-   List* L = create_list();
-   return L;
+List* crea_lista() 
+{
+  List* lista = create_list();
+  int* d;
+  for(int i = 0; i < 10; i++)
+    {
+      d = (int*) malloc(sizeof(int*)); 
+      *d = i;
+      push_back(lista, *d);
+    }
+  return lista;
+  
 }
 
 /*
