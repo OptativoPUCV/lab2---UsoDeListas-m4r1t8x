@@ -65,7 +65,7 @@ int sumaLista(List *L)
   List* lista = create_list();
   int *d = (int*) first(lista);
   int suma = 0;
-  while(lista != NULL)
+  while(d != NULL)
   {
     suma += *d;
     d = (int*) next(lista);
@@ -105,7 +105,6 @@ Puedes usar una pila auxiliar.
 
 void copia_pila(Stack* P1, Stack* P2) 
 {
-  Stack* Paux = create_stack();
   
   
 }
