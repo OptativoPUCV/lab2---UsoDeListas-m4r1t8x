@@ -417,3 +417,18 @@ exercises.c:88:9: error: unused variable ‘lista’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 5873e81
+Wed 20 Mar 2024 08:54:05 PM UTC: 
+ exercises.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:71:8: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   71 |     *d = (int*) next(lista);
+      |        ^
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:89:8: error: unused variable ‘d’ [-Werror=unused-variable]
+   89 |   int *d = (int*) first(lista);
+      |        ^
+cc1: all warnings being treated as errors
+Compilation failed
+e1ea2e6
