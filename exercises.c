@@ -85,11 +85,11 @@ posiciona en el elemento anterior.
 
 void eliminaElementos(List*L, int elem)
 {
-  List* lista = create_list();
+  /*List* lista = create_list();
   int *d = (int*) first(lista);
   
-  
-
+  */
+  return 0;
 }
 
 /*

@@ -443,3 +443,17 @@ exercises.c:89:8: error: unused variable ‘d’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 71d4f83
+Wed 20 Mar 2024 08:55:06 PM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:92:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   92 |   return 0;
+      |          ^
+exercises.c:86:6: note: declared here
+   86 | void eliminaElementos(List*L, int elem)
+      |      ^~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2a58ac5
