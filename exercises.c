@@ -85,14 +85,15 @@ posiciona en el elemento anterior.
 
 void eliminaElementos(List*L, int elem)
 {
-  List* lista = create_list();
-  int *d = (int*) first(lista);
-  while(lista != NULL)
+  //List* lista = create_list();
+  int *d = (int*) first(L);
+  while(d != NULL)
   {
-    if(*d != elem)
-      d = (int*) next(lista);
-    else
-      popCurrent(lista);
+    if(*d == elem)
+       popCurrent(L);
+    d = (int*) next(L);
+    
+     
   }
 }
 
