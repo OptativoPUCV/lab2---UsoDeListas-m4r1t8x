@@ -402,3 +402,18 @@ exercises.c:71:8: error: assignment to ‘int’ from ‘int *’ makes integer 
 cc1: all warnings being treated as errors
 Compilation failed
 18eba59
+Wed 20 Mar 2024 08:52:52 PM UTC: 
+ exercises.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:71:8: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   71 |     *d = next(lista);
+      |        ^
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:88:9: error: unused variable ‘lista’ [-Werror=unused-variable]
+   88 |   List* lista = create_list();
+      |         ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5873e81
