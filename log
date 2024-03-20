@@ -14,3 +14,21 @@ exercises.c:53:7: error: implicit declaration of function ‘push_back’; did y
 cc1: all warnings being treated as errors
 Compilation failed
 32212ea
+Wed 20 Mar 2024 08:28:36 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crea_lista’:
+exercises.c:53:23: error: passing argument 2 of ‘pushBack’ makes pointer from integer without a cast [-Werror=int-conversion]
+   53 |       pushBack(lista, *d);
+      |                       ^~
+      |                       |
+      |                       int
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:20:30: note: expected ‘void *’ but argument is of type ‘int’
+   20 | void pushBack(List *L, void *dato);
+      |                        ~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9ceb4e8

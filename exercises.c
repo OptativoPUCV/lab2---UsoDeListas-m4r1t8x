@@ -50,7 +50,7 @@ List* crea_lista()
     {
       d = (int*) malloc(sizeof(int*)); 
       *d = i;
-      push_back(lista, *d);
+      pushBack(lista, *d);
     }
   return lista;
   
