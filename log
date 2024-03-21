@@ -740,3 +740,14 @@ Thu 21 Mar 2024 01:50:28 PM UTC:
  tests:  3|2
 total_score: 40/70
 1b111e5
+Thu 21 Mar 2024 01:51:58 PM UTC: 
+ exercises.c | 11 +++++------
+ 1 file changed, 5 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:106:8: error: unused variable ‘dato’ [-Werror=unused-variable]
+  106 |   int *dato = (int*) pop(P1);
+      |        ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+56bcd33
