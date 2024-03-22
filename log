@@ -790,3 +790,9 @@ stack.h:11:6: note: declared here
       |      ^~~~
 Compilation failed
 28e6c3b
+Fri 22 Mar 2024 10:34:41 PM UTC: 
+ exercises.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+ tests:  4|1
+total_score: 50/70
+d154bcc
