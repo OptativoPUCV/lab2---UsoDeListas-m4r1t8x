@@ -757,3 +757,36 @@ Thu 21 Mar 2024 01:52:18 PM UTC:
  tests:  3|2
 total_score: 40/70
 146750b
+Fri 22 Mar 2024 10:28:47 PM UTC: 
+ exercises.c | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:108:5: error: too few arguments to function ‘push’
+  108 |     push(PN);
+      |     ^~~~
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:6: note: declared here
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |      ^~~~
+In file included from test.c:5:
+exercises.c:113:5: error: too few arguments to function ‘push’
+  113 |     push(P1);
+      |     ^~~~
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:6: note: declared here
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |      ^~~~
+In file included from test.c:5:
+exercises.c:114:5: error: too few arguments to function ‘push’
+  114 |     push(P2);
+      |     ^~~~
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:6: note: declared here
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |      ^~~~
+Compilation failed
+28e6c3b
