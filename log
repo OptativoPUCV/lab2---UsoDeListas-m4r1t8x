@@ -1082,3 +1082,38 @@ Sat 23 Mar 2024 10:00:16 PM UTC:
  tests:  5|1
 total_score: 50/70
 33791ec
+Sat 23 Mar 2024 10:08:03 PM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:133:17: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  133 |     char dato = (char) malloc(sizeof(char));
+      |                 ^
+exercises.c:134:14: error: comparison between pointer and integer [-Werror]
+  134 |     if (dato == NULL) exit(EXIT_FAILURE);
+      |              ^~
+exercises.c:135:5: error: invalid type argument of unary ‘*’ (have ‘int’)
+  135 |     *dato = cadena[i];
+      |     ^~~~~
+exercises.c:138:21: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  138 |       push(caracter,dato);
+      |                     ^~~~
+      |                     |
+      |                     char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:149:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  149 |     if( caracter == NULL) return 0;)
+      |     ^~
+exercises.c:149:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  149 |     if( caracter == NULL) return 0;)
+      |                                    ^
+exercises.c:149:36: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+Compilation failed
+4e51aa5
