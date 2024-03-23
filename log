@@ -1047,3 +1047,18 @@ exercises.c:142:5: error: ‘else’ without a previous ‘if’
 cc1: all warnings being treated as errors
 Compilation failed
 f52ce3a
+Sat 23 Mar 2024 09:43:50 PM UTC: 
+ exercises.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:140:13: error: unused variable ‘ultimoPar’ [-Werror=unused-variable]
+  140 |       char *ultimoPar = (char*) top(caracter);
+      |             ^~~~~~~~~
+exercises.c:144:30: error: ‘ultimoPar’ undeclared (first use in this function)
+  144 |     if((cadena[i] == ')' && *ultimoPar == '(') || (cadena[i] == '}' && *ultimoPar == '{') || (cadena[i] == ']' && *ultimoPar == '['))
+      |                              ^~~~~~~~~
+exercises.c:144:30: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+ee769e1
