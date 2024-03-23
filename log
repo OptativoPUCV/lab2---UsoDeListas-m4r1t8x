@@ -796,3 +796,57 @@ Fri 22 Mar 2024 10:34:41 PM UTC:
  tests:  4|1
 total_score: 50/70
 d154bcc
+Sat 23 Mar 2024 03:29:09 PM UTC: 
+ exercises.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:128:14: error: implicit declaration of function ‘create_Stack’; did you mean ‘create_stack’? [-Werror=implicit-function-declaration]
+  128 |   Stack *P = create_Stack();
+      |              ^~~~~~~~~~~~
+      |              create_stack
+exercises.c:128:14: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+exercises.c:131:18: error: comparison between pointer and integer [-Werror]
+  131 |     if(cadena[0] == "(")
+      |                  ^~
+exercises.c:131:18: error: comparison with string literal results in unspecified behavior [-Werror=address]
+exercises.c:132:20: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  132 |       push(P,cadena[0]);
+      |              ~~~~~~^~~
+      |                    |
+      |                    char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:133:23: error: comparison between pointer and integer [-Werror]
+  133 |     else if(cadena[0] == ")")
+      |                       ^~
+exercises.c:133:23: error: comparison with string literal results in unspecified behavior [-Werror=address]
+exercises.c:134:20: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  134 |       push(P,cadena[0]);
+      |              ~~~~~~^~~
+      |                    |
+      |                    char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:136:22: error: initialization of ‘char’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  136 |     char ultimopar = top(P);
+      |                      ^~~
+exercises.c:138:18: error: comparison between pointer and integer [-Werror]
+  138 |     if(cadena[0] == ")" && ultimopar == "(")
+      |                  ^~
+exercises.c:138:18: error: comparison with string literal results in unspecified behavior [-Werror=address]
+exercises.c:138:38: error: comparison between pointer and integer [-Werror]
+  138 |     if(cadena[0] == ")" && ultimopar == "(")
+      |                                      ^~
+exercises.c:138:38: error: comparison with string literal results in unspecified behavior [-Werror=address]
+cc1: all warnings being treated as errors
+Compilation failed
+ade23b1
