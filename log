@@ -965,3 +965,9 @@ exercises.c:146:30: error: ‘ultimoPa’ undeclared (first use in this function
 exercises.c:146:30: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 d804753
+Sat 23 Mar 2024 08:59:16 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|1
+total_score: 50/70
+aceaefd
