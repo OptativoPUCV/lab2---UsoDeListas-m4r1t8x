@@ -141,7 +141,7 @@ int parentesisBalanceados(char *cadena)
       
     else if((cadena[i] == ')' && *ultimoPar == '(') || (cadena[i] == '}' && *ultimoPar == '{') || (cadena[i] == ']' && *ultimoPar == '['))
       return 1;
-    }
+    
     i++;
   }
   return 0;

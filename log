@@ -1030,3 +1030,20 @@ exercises.c:146:3: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 d2cec46
+Sat 23 Mar 2024 09:42:38 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:137:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  137 |     if(cadena[i] == '(' || cadena[i] == '{' || cadena[i] == '[')
+      |     ^~
+exercises.c:139:7: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  139 |       char *ultimoPar = (char*) top(caracter);
+      |       ^~~~
+exercises.c:142:5: error: ‘else’ without a previous ‘if’
+  142 |     else if((cadena[i] == ')' && *ultimoPar == '(') || (cadena[i] == '}' && *ultimoPar == '{') || (cadena[i] == ']' && *ultimoPar == '['))
+      |     ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f52ce3a
