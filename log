@@ -1190,3 +1190,30 @@ Sat 23 Mar 2024 10:30:04 PM UTC:
  tests:  4|1
 total_score: 50/70
 211faa1
+Sat 23 Mar 2024 10:44:53 PM UTC: 
+ exercises.c | 15 +++++++++------
+ 1 file changed, 9 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:138:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  138 |     if(cadena[i] == '(' || cadena[i] == '{' || cadena[i] == '[')
+      |     ^~
+exercises.c:140:7: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  140 |       char *primer = (char*) top(caracter);
+      |       ^~~~
+exercises.c:147:7: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  147 |       if((*ultimo == ')' && *primer == '(') || (*ultimo == '}' && *primer == '{') || (*ultimo == ']' && *primer == '['))
+      |       ^~
+exercises.c:149:9: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  149 |         pop(P2);
+      |         ^~~
+exercises.c:153:7: error: ‘primer’ undeclared (first use in this function)
+  153 |   if(*primer != NULL && *ultimo != NULL)
+      |       ^~~~~~
+exercises.c:153:7: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:153:26: error: ‘ultimo’ undeclared (first use in this function)
+  153 |   if(*primer != NULL && *ultimo != NULL)
+      |                          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+114874e
