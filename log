@@ -1062,3 +1062,17 @@ exercises.c:144:30: note: each undeclared identifier is reported only once for e
 cc1: all warnings being treated as errors
 Compilation failed
 ee769e1
+Sat 23 Mar 2024 09:44:04 PM UTC: 
+ exercises.c | 2 --
+ 1 file changed, 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:137:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  137 |     if(cadena[i] == '(' || cadena[i] == '{' || cadena[i] == '[')
+      |     ^~
+exercises.c:139:7: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  139 |       char *ultimoPar = (char*) top(caracter);
+      |       ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+40fd41e
