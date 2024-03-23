@@ -1001,3 +1001,32 @@ Sat 23 Mar 2024 09:17:08 PM UTC:
  tests:  5|1
 total_score: 50/70
 5bed6d6
+Sat 23 Mar 2024 09:42:14 PM UTC: 
+ exercises.c | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:137:5: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  137 |     if(cadena[i] == '(' || cadena[i] == '{' || cadena[i] == '[')
+      |     ^~
+exercises.c:139:7: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  139 |       char *ultimoPar = (char*) top(caracter);
+      |       ^~~~
+exercises.c:142:5: error: ‘else’ without a previous ‘if’
+  142 |     else if((cadena[i] == ')' && *ultimoPar == '(') || (cadena[i] == '}' && *ultimoPar == '{') || (cadena[i] == ']' && *ultimoPar == '['))
+      |     ^~~~
+In file included from test.c:5:
+exercises.c: At top level:
+exercises.c:147:3: error: expected identifier or ‘(’ before ‘return’
+  147 |   return 0;
+      |   ^~~~~~
+exercises.c:148:1: error: expected identifier or ‘(’ before ‘}’ token
+  148 | }
+      | ^
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:146:3: error: control reaches end of non-void function [-Werror=return-type]
+  146 |   }
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+d2cec46
