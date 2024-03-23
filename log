@@ -953,3 +953,15 @@ exercises.c:146:107: error: suggest parentheses around ‘&&’ within ‘||’ 
 cc1: all warnings being treated as errors
 Compilation failed
 3132c84
+Sat 23 Mar 2024 08:58:45 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:146:30: error: ‘ultimoPa’ undeclared (first use in this function); did you mean ‘ultimoPar’?
+  146 |     if((cadena[i] == ')' && *ultimoPa == '(') || (cadena[i] == '}' && *ultimoPar == '{') || (cadena[i] == ']' && *ultimoPar == '['))
+      |                              ^~~~~~~~
+      |                              ultimoPar
+exercises.c:146:30: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+d804753
