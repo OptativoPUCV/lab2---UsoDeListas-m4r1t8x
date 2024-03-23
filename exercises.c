@@ -131,7 +131,6 @@ int parentesisBalanceados(char *cadena)
   while(cadena[i] != '\0')
   {
     char *dato = (char*) malloc(sizeof(char));
-    if (dato == NULL) exit(EXIT_FAILURE);
     *dato = cadena[i];
 
     if(cadena[i] == '(' || cadena[i] == '{' || cadena[i] == '[')
