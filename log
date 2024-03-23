@@ -1217,3 +1217,17 @@ exercises.c:153:26: error: ‘ultimo’ undeclared (first use in this function)
 cc1: all warnings being treated as errors
 Compilation failed
 114874e
+Sat 23 Mar 2024 10:50:52 PM UTC: 
+ exercises.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:157:7: error: ‘primer’ undeclared (first use in this function)
+  157 |   if(*primer != NULL && *ultimo != NULL)
+      |       ^~~~~~
+exercises.c:157:7: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:157:26: error: ‘ultimo’ undeclared (first use in this function)
+  157 |   if(*primer != NULL && *ultimo != NULL)
+      |                          ^~~~~~
+Compilation failed
+1e27046
