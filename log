@@ -850,3 +850,38 @@ exercises.c:138:38: error: comparison with string literal results in unspecified
 cc1: all warnings being treated as errors
 Compilation failed
 ade23b1
+Sat 23 Mar 2024 03:29:41 PM UTC: 
+ exercises.c | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:128:14: error: implicit declaration of function ‘create_Stack’; did you mean ‘create_stack’? [-Werror=implicit-function-declaration]
+  128 |   Stack *P = create_Stack();
+      |              ^~~~~~~~~~~~
+      |              create_stack
+exercises.c:128:14: error: initialization of ‘Stack *’ {aka ‘List *’} from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+exercises.c:129:16: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  129 |   while(cadena != '\0')
+      |                ^~
+exercises.c:129:9: note: did you mean to dereference the pointer?
+  129 |   while(cadena != '\0')
+      |         ^
+exercises.c:131:15: error: comparison with string literal results in unspecified behavior [-Werror=address]
+  131 |     if(cadena == "(")
+      |               ^~
+exercises.c:133:20: error: comparison with string literal results in unspecified behavior [-Werror=address]
+  133 |     else if(cadena == ")")
+      |                    ^~
+exercises.c:136:22: error: initialization of ‘char’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  136 |     char ultimopar = top(P);
+      |                      ^~~
+exercises.c:138:15: error: comparison with string literal results in unspecified behavior [-Werror=address]
+  138 |     if(cadena == ")" && ultimopar == "(")
+      |               ^~
+exercises.c:138:35: error: comparison between pointer and integer [-Werror]
+  138 |     if(cadena == ")" && ultimopar == "(")
+      |                                   ^~
+exercises.c:138:35: error: comparison with string literal results in unspecified behavior [-Werror=address]
+cc1: all warnings being treated as errors
+Compilation failed
+8b84bf1
