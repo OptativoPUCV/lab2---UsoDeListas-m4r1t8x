@@ -1231,3 +1231,9 @@ exercises.c:157:26: error: ‘ultimo’ undeclared (first use in this function)
       |                          ^~~~~~
 Compilation failed
 1e27046
+Sat 23 Mar 2024 10:51:20 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|1
+total_score: 50/70
+01e63b4
